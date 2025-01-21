@@ -1,261 +1,91 @@
-// Boolean1
-// A butun soni berilgan. Jumlani rostlikka tekshiring: "A soni musbat".
-
-// let a = +prompt(`Sonni kiriting`);
-// if (a > 0) {
-//   console.log(`${a} soni musbat son`);
-// } else {
-//   console.log(`${a} soni manfiy son`);
+// For1.
+// k va n butun sonlari berilgan (n > 0). k sonini n marta chiqaruvchi programma tuzilsin.
+// let n = 12;
+// let k = 700;
+// for (let i = 0; i < n; i++) {
+//   console.log(k);
 // }
 
-// Boolean2
-// A butun soni berilgan. Jumlani rostlikka tekshiring: "A soni toq son"
-// let a = +prompt(`Son kiriting`);
-// if (a % 2 != 0) {
-//   console.log(`${a} soni toq son`);
-// } else {
-//   console.log(`${a} soni just son`);
+// For2.
+// Bir kg konfetning narxi berilgan (haqiqiy son). 0.1, 0.2, …, 0.9, 1 kg konfetni narxini chiqaruvchi programma tuzilsin.
+// let narx = +prompt(`Konfet narxini kiriting`);
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`${i / 10} kg ${Math.floor((i / 10) * narx)} so'm`);
 // }
 
-// Boolean3
-// Ikkita butun A va B sonlari berilgan. Jumlani rostlikka tekshiring: "A>2 va B <=3".
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt(`ikkinchi sonni kiriting`);
-// if (a > 2 && b <= 3) {
-//   console.log(true);
-// } else {
-//   console.log(false);
+// For3.
+// n butun soni berilgan (n > 0). Quyidagi yig'indini hisoblovchi programma tuzilsin.
+// S = n^2 +(n+1)^2+(n+2)^2 + ... +(2*n)^2
+// let n = 12;
+// for (let i = 1; i <= n; i++) {
+//   console.log(n ** 2 + (n + i) + (2 * n) ** 2);
 // }
 
-// Boolean4
-//  Uchta A, B, C butun sonlar berilgan. Jumlani rostlikka tekshiring: "A <= B <= C"
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt(`Ikkinchi sonni kiriting`);
-// let c = +prompt(`/uchinchi soni kiriting`);
-// if (a <= b && b <= c) {
-//   console.log(`To'gri`);
-// } else {
-//   console.log(`Noto'g'ri`);
+// For4.
+// N butun soni berilgan. Quyidagi yig'indini chiqaruvchi programma tuzilsin.
+// 1^N+2^(N-1) + ...+ N^1
+// Input: N = 5;
+// 1 ^ 5 + 2 ^ 4 + 3 ^ 3 + 4 ^ 2 + 5 ^ 1
+// Output: 65
+
+let n = 5;
+for (let i = 1; i <= 5; i++) {
+    
+}
+
+// For5. A va B butun soni berilgan (A < B). A va B sonlari orasidagi barcha butun sonlarni chiqaruvchi programma tuzilsin. Bunda har bir son o'zining qiymaticha chiqarilsin. Ya'ni 3 soni 3 marta chiqariladi.
+
+// let a = 3;
+// let b = 7;
+// for (let i = a; i <= b; i++) {
+//   console.log(a);
 // }
 
-// Boolean5
-// Ikkita butun A va B sonlari berilgan. Jumlani rostlikka tekshiring: "A va B sonlarining har ikkalasi ham yoki toq son yoki juft son".
-//  let a = +prompt('Birinchi sonni kiritibg');
-// let b = +prompt('Ikkinchi sonni kiritibg');
-// if ((a % 2 == 0 && b % 2 == 0) || (a % 2 != 0 && b % 2 != 0)) {
-//   console.log(`Berilgan sonlar har ikkisi ham juft yoki to'q`);
-// } else {
-//   console.log(`Kiritigan sonlar has ikkisi ham juft yoki toq emas.`);
+// For6. Sonning bo’luvchilarini topish;
+// let son = 12;
+// for (let i = 1; i <= son; i++) {
+//   if (son % i == 0) {
+//     console.log(i);
+//   }
 // }
 
-// Boolean6.
-// Uchta A, B, C butun sonlar berilgan. Jumlani rostlikka tekshiring: "A, B, C sonlarning hech bo'lmaganda bittasi musbat".
-// let a = +prompt(`Birinchi sonni kiriting);
-// let b = +prompt(`Ikkinchi sonni kiriting);
-// let c = +prompt(`Uchinchi sonni kiriting);
-// if (
-//   (a > 0 && b < 0 && c < 0) ||
-//   (b > 0 && a < 0 && c < 0) ||
-//   (c > 0 && b < 0 && a < 0)
-// ) {
-//   console.log(`To'g'ri`);
-// } else {
-//   console.log(`noto'g'ri`);
+// While1. N va K butun musbat sonlari berilgan. Faqat ayirish va qo'shish amallarini ishlatib N sonini K soniga bo'lgandagi qoldiq va butun qismini aniqlovchi programma tuzilsin.
+// let n = 9;
+// let k = 3;
+
+// While2. 2 sonining qandaydir darajasini bildiruvchi n butun soni berilgan (n > 0). n = 2^k ni aniqlovchi programma tuzilsin.
+
+// let n = +prompt(`2 ning darajasi bo'lgan sonlarni kiriting`);
+// let k = 0;
+// for (let i = k; i <= n; i++) {
+//   if (n == 2 ** i) {
+//     console.log(i);
+//   }
 // }
 
-// Boolean7.
-// Uch xonali son berilgan. Jumlani rostlikka tekshiring: “Ushbu sonning barcha raqamlari har xil".
-// let son = +prompt(`3 xonali son kiriting`);
-// let birinchiSon = (son - (son % 100)) / 100;
-// let ikkinchiSon = ((son % 100) - (son % 10)) / 10;
-// let uchinchiSon = son % 10;
-// if ((birinchiSon == ikkinchiSon) == uchinchiSon) {
-//   console.log(`Kiritilgan sonning barcha raqamlari bir xil`);
-// } else {
-//   console.log(`Kiritilgan son raqamlari bir xil emas`);
-// }
-
-// Boolean8.
-// Jumlani rostlikka tekshiring: "Berilgan uchta butun sonlarning hech bo'lmaganda 2 tasi bir biriga teng".
-// let a = 1;
-// let b = 1;
-// let c = 8;
-// if (a == b || b == c || a == c) {
-//   console.log(`To'g'ri`);
-// } else {
-//   console.log(`Noto'g'ri`);
-// }
-
-// Boolean 2-qismi
-// Boolean1.
-// A butun soni berilgan. Jumlani rostlikka tekshiring: "A soni juft son”.
-// let a = +prompt('Son kiriting');
-// if (a % 2 == 0) {
-//   console.log(`Berilgan son juft son`);
-// } else {
-//   console.log(`Berilgan son toq son`);
-// }
-
-// Boolean2.
-// Ikkita butun A va B sonlari berilgan. Jumlani rostlikka tekshiring:"A >= 0 yoki B <-2"
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt(`Ikkinchi sonni kiriting`);
-// if (a >= 0 || b < -2) {
-//   console.log(`To'g'ri`);
-// } else {
-//   console.log(`Noto'g'ri`);
-// }
-// Boolean3.
-// Uchta A, B, C butun sonlar berilgan. Jumlani rostlikka tekshiring: "B soni A va C sonlari orasida yotadi".
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt(`Ikkinchsi sonni kiriting`);
-// let c = +prompt(`Uchinchi sonni kiriting`);
-// if (a < b && b < c) {
-//   console.log(`Siz to'g'ri yo'dasiz`);
-// } else {
-//   console.log(`Siz noto'g'ri yo'dasiz`);
-// }
-
-// Boolean4.
-// Ikkita butun A va B sonlari berilgan. Jumlani rostlikka tekshiring: "A va B sonlari toq sonlar".
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt(`Ikkinchi sonni kiriting`);
-// if (a % 2 != 0 && b % 2 != 0) {
-//   console.log(`Kiritilgan ikkala son ham toq son`);
-// } else {
-//   console.log(`Kiritilgan sonlar toq sonlar emas`);
-// }
-
-// Boolean5.
-// Ikkita butun A va B sonlari berilgan. Jumlani rostlikka tekshiring: "A va B sonlarning hech bo'lmaganda bittasi toq son".
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt(`Ikkinchi sonni kiriting`);
-// if (a % 2 != 0 || b % 2 != 0) {
-//   console.log(`To'g'ri`);
-// } else {
-//   console.log(`Noto'g'ri`);
-// }
-
-// Boolean6.
-// Ikkita butun A va B sonlari berilgan. Jumlani rostlikka tekshiring: "A va B sonlarning faqat bittasi toq son".
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt(`Ikkinchi sonni kiriting`);
-// if ((a % 2 != 0 && b % 2 == 0) || (b % 2 != 0 && a % 2 == 0)) {
-//   console.log(`To'g'ri`);
-// } else {
-//   console.log(`Noto'g'ri`);
-// }
-
-// Boolean7.
-// Uchta A, B, C butun sonlar berilgan. Jumlani rostlikka tekshiring: "A, B, C sonlarning har biri musbat".
-// let a = 1;
-// let b = 2;
-// let c = 9;
-// if (a > 0 && b > 0 && c > 0) {
-//   console.log(`Har biri musbat son`);
-// } else {
-//   console.log(`Har biri musbat son emas`);
-// }
-
-// Boolean8.
-// Uchta A, B, C butun sonlar berilgan. Jumlani rostlikka tekshiring: "A, B, C sonlaridan faqat bittasi musbat son".
+// For1. a va b butun sonlari berilgan (a < b). a va b sonlari orasidagi barcha butun sonlarni (a va b ni ham) chiqaruvchi va chiqarilgan sonlar sonini chiqaruvchi programma tuzilsin. (a va b xam chiqarilsin).
+// let counter = 0;
 // let a = +prompt("Birinchi sonni kiriting");
 // let b = +prompt("Ikkinchi sonni kiriting");
-// let c = +prompt("Uchinchi sonni kiriting");
-// if (
-//   (a > 0 && b < 0 && c < 0) ||
-//   (a < 0 && b > 0 && c < 0) ||
-//   (a < 0 && b < 0 && c > 0)
-// ) {
-//   console.log(`Kiritlgan sonlarning 1 tasi musbat`);
-// } else {
-//   console.log(`Xatolik yuz berdi`);
+// for (let i = a; i <= b; i++) {
+//   counter++;
+//   console.log(i);
 // }
+// console.log(`a va b orasidagi sonlar soni ${counter}`);
 
-// Boolean9
-// Uchta A, B, C butun sonlar berilgan. Jumlani rostlikka tekshiring: "A, B, C sonlardan faqat ikkitasi musbat son".
-// let a = +prompt("Birinchi sonni kiriting");
-// let b = +prompt("Ikkinchi sonni kiriting");
-// let c = +prompt("Uchinchi sonni kiriting");
-// if (
-//   (a >= 0 && b >= 0 && c < 0) ||
-//   (a >= 0 && b <= 0 && c >= 0) ||
-//   (a <= 0 && b >= 0 && c >= 0)
-// ) {
-//   console.log(`Kiritlgan sonlarning 2 tasi musbat`);
-// } else {
-//   console.log(`Xatolik yuz berdi`);
+// For2. a va b butun sonlari berilgan (a < b). a va b sonlari orasidagi barcha butun sonlarni (a va b dan tashqari) kamayish tartibida chiqaruvchi va chiqarilgan sonlar sonini chiqaruvchi progma tuzilsin.
+// let counter = 0;
+// let a = 3;
+// let b = 7;
+// for (let i = b; i >= a; i--) {
+//   counter++;
+//   console.log(i);
 // }
+// console.log(`a va b sonlar orasidagi sonlar soni ${counter}`)
 
-// Boolean10
-//  Musbat butun son berilgan. Jumlani rostlikka tekshiring: "Berilgan son ikki xonali juft son".
-// let son = +prompt("Ikki honali son kiritng");
-// if (10 < firstNumber < 100 && firstNumber % 2 == 0) {
-//   console.log("Togri");
-// } else {
-//   console.log("Juf ikki honali son kiriting");
+// For3. Bir kg konfetning narxi berilgan (haqiqiy son). 1, 2, 10 kg konfetni narxini chiqaruvchi programma tuzilsin.
+// let narx = +prompt(`Konfet narxini kiriting`);
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`${i} kg konfet ${narx * i} so'm`);
 // }
-
-// Boolean11
-// Musbat butun son berilgan. Jumlani rostlikka tekshiring: "Berilgan son uch xonali toq".
-// let ikkinchiSon = +prompt("Uch xonali toq son kiriting");
-// if (100 < secondNumber < 1000 && secondNumber % 2 != 0) {
-//   console.log("Siz togri yuldasiz");
-// } else {
-//   console.log("Siz notugri yuldasiz");
-// }
-
-// Boolean 12
-// Jumlani rostlikka tekshiring: "Berilgan uchta butun sonlarning hech bo'lmaganda bir jufti o'zaro qarama-qarshi".
-// let birinchiSon = 1;
-// let ikkinchiSon = 3;
-// let uchinchiSon = 3;
-// if (
-//   birinchiSon + ikkinchiSon == 0 ||
-//   ikkinchiSon + uchinchiSon == 0 ||
-//   birinchiSon + uchinchiSon == 0
-// ) {
-//   console.log("Ozaro qarama qarshi");
-// } else {
-//   console.log("Qarama qarshi emas");
-// }
-
-// Boolean13.
-// Uch xonali son berilgan. Jumlani rostlikka tekshiring: “Ushbu sonning raqamlari ketama- ket o'suvchi bo'lib joylashgan".
-// let son = +prompt("Uch xonali ketma-ket osuvchi  son kiriting");
-// let firstNumber = (son - (son % 100)) / 100;
-// let secondNumber = ((son % 100) - (son % 10)) / 10;
-// let thirdNumber = son % 10;
-// if (firstNumber == secondNumber - 1 && secondNumber == thirdNumber - 1) {
-//   console.log("Bu osuvchi ketma ket uch xonali son");
-// } else {
-//   console.log(son);
-// }
-
-// Boolean 14
-//  Uch xonali son berilgan. Jumlani rostlikka tekshiring: "Ushbu sonning raqamlari ketama- ket o'suvchi bo'lib joylashgan yoki kamayuvchi ketma-ketlikka ega".
-// let son = +prompt("Uch xonali ketma-ket osuvchi yoki kamapyuvchi son kiriting");
-// let firstNumber = (son - (son % 100)) / 100;
-// let secondNumber = ((son % 100) - (son % 10)) / 10;
-// let thirdNumber = son % 10;
-
-// if (firstNumber == secondNumber - 1 && secondNumber == thirdNumber - 1) {
-//   console.log("Bu osuvchi ketma ket uch xonali son");
-// } else if (firstNumber - 1 == secondNumber && secondNumber - 1 == thirdNumber) {
-//   console.log("Bu kamayuvchi uch xonali ketma ket son");
-// } else {
-//   console.log(son);
-// }
-
-// Boolean15.
-// Uch xonali son berilgan. Jumlani rostlikka tekshiring: "Ushbu sonni chapdan o'qiganda ham, o'ngdan o'qiganda ham bir xil".
-// let son = +prompt(`3xonali son kiriting`);
-// let firstNumber = (son - (son % 100)) / 100;
-// let secondNumber = ((son % 100) - (son % 10)) / 10;
-// let thirdNumber = son % 10;
-// if (firstNumber == thirdNumber) {
-//   console.log(`To'g'ri`);
-// } else {
-//   console.log(`Noto'g'ri`);
-// }
-// console.log();
