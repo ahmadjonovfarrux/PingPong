@@ -29,17 +29,16 @@
 // 1 ^ 5 + 2 ^ 4 + 3 ^ 3 + 4 ^ 2 + 5 ^ 1
 // Output: 65
 
-let n = 5;
-for (let i = 1; i <= 5; i++) {
-    
-}
+// for (let i = 5; i >= 1; i--) {
+//   console.log(i);
+// }
 
 // For5. A va B butun soni berilgan (A < B). A va B sonlari orasidagi barcha butun sonlarni chiqaruvchi programma tuzilsin. Bunda har bir son o'zining qiymaticha chiqarilsin. Ya'ni 3 soni 3 marta chiqariladi.
 
 // let a = 3;
 // let b = 7;
-// for (let i = a; i <= b; i++) {
-//   console.log(a);
+// for (let i = b; i >= a; i -= a) {
+//   console.log(i);
 // }
 
 // For6. Sonning bo’luvchilarini topish;
