@@ -17,10 +17,12 @@
 // For3.
 // n butun soni berilgan (n > 0). Quyidagi yig'indini hisoblovchi programma tuzilsin.
 // S = n^2 +(n+1)^2+(n+2)^2 + ... +(2*n)^2
-// let n = 12;
-// for (let i = 1; i <= n; i++) {
-//   console.log(n ** 2 + (n + i) + (2 * n) ** 2);
+// let n = 5;
+// let result = 0;
+// for (let i = 0; i <= n; i++) {
+//   result += (n + i) ** 2;
 // }
+// console.log(result);
 
 // For4.
 // N butun soni berilgan. Quyidagi yig'indini chiqaruvchi programma tuzilsin.
@@ -28,18 +30,23 @@
 // Input: N = 5;
 // 1 ^ 5 + 2 ^ 4 + 3 ^ 3 + 4 ^ 2 + 5 ^ 1
 // Output: 65
-
-let n = 5;
-for (let i = 1; i <= 5; i++) {
-    
-}
+// let n = 5;
+// let k = n;
+// let result = 0;
+// for (let i = 1; i <= 5; i++) {
+//   result += i ** k;
+//   k--;
+// }
+// console.log(result);
 
 // For5. A va B butun soni berilgan (A < B). A va B sonlari orasidagi barcha butun sonlarni chiqaruvchi programma tuzilsin. Bunda har bir son o'zining qiymaticha chiqarilsin. Ya'ni 3 soni 3 marta chiqariladi.
 
-// let a = 3;
+// let a = 2;
 // let b = 7;
-// for (let i = a; i <= b; i++) {
-//   console.log(a);
+// for (let i = a; i < b; i++) {
+//   for (let k = 0; k < i; k++) {
+//     console.log(i);
+//   }
 // }
 
 // For6. Sonning bo’luvchilarini topish;
@@ -51,8 +58,19 @@ for (let i = 1; i <= 5; i++) {
 // }
 
 // While1. N va K butun musbat sonlari berilgan. Faqat ayirish va qo'shish amallarini ishlatib N sonini K soniga bo'lgandagi qoldiq va butun qismini aniqlovchi programma tuzilsin.
-// let n = 9;
 // let k = 3;
+// let n = 50;
+// let counter = 0;
+// while (k < n) {
+//   n = n - k;
+//   counter++;
+// }
+// console.log(`Butun son ${counter} va qoldiq ${n}`);
+// For bilan ishlangan varianti
+// for (let i = k; i <= n; i += 3) {
+//  counter++
+// }
+// console.log(counter);
 
 // While2. 2 sonining qandaydir darajasini bildiruvchi n butun soni berilgan (n > 0). n = 2^k ni aniqlovchi programma tuzilsin.
 
