@@ -1,109 +1,169 @@
-// For1.
-// k va n butun sonlari berilgan (n > 0). k sonini n marta chiqaruvchi programma tuzilsin.
-// let n = 12;
-// let k = 700;
-// for (let i = 0; i < n; i++) {
-//   console.log(k);
-// }
-
-// For2.
-// Bir kg konfetning narxi berilgan (haqiqiy son). 0.1, 0.2, …, 0.9, 1 kg konfetni narxini chiqaruvchi programma tuzilsin.
+// For4.
+// Bir kg konfetning narxi berilgan (haqiqiy son). 1.2, 1.4, ..., 2 kg konfetni narxini chiqaruvchi programma tuzilsin.
 // let narx = +prompt(`Konfet narxini kiriting`);
-
-// for (let i = 1; i <= 10; i++) {
-//   console.log(`${i / 10} kg ${Math.floor((i / 10) * narx)} so'm`);
+// for (let i = 12; i <= 20; i++) {
+//   console.log(`${i / 10} kg konfet narxi ${(i / 10) * narx}`);
 // }
 
-// For3.
-// n butun soni berilgan (n > 0). Quyidagi yig'indini hisoblovchi programma tuzilsin.
-// S = n^2 +(n+1)^2+(n+2)^2 + ... +(2*n)^2
+// For5.
+// a va b butun sonlari berilgan (a < b). a dan b gacha bo'lgan barcha butun sonlar yig'indisini chiqaruvchi programma tuzilsin.
+// let a = +prompt(`Birinchi sonni kiriting`);
+// let b = +prompt(`Ikkinchi sonni kiriting`);
+// let result = 0;
+// for (let i = a; i < b; i++) {
+//   result = result + i;
+// }
+// console.log(result);
+
+// For6.
+// a va b butun sonlari berilgan (a < b). a dan b gacha bo'lgan barcha butun sonlar ko'paytmasini chiqaruvchi programma tuzilsin.
+// let a = +prompt(`Birinchi sonni kiriting`);
+// let b = +prompt(`Ikkinchi sonni kiriting`);
+// let result = 1;
+// for (let i = a; i < b; i++) {
+//   result = result * i;
+// }
+// console.log(result);
+
+// For7.
+// a va b butun sonlari berilgan (a < b). a dan b gacha bo'lgan barcha butun sonlar kvadratlarining yig'indisini chiqaruvchi programma tuzilsin.
+// let a = +prompt(`Birinchi sonni kiriting`);
+// let b = +prompt("Ikkinchi sonni kiriting");
+// let result = 0;
+// for (let i = a; i < b; i++) {
+//   result = i ** 2 + result;
+// }
+// console.log(result);
+
+// For8.
+// n butun soni berilgan (n > 0). Quyidagi yig'indini hisoblovchi programma tuzilsin. S=1+1/2+1/3+...+1/n
+// let n = 11;
+// let result = 0;
+// for (let i = 1; i <= n; i++) {
+//   result = result += 1 / i;
+// }
+// console.log(result);
+
+// For9.
+// n butun soni berilgan (n > 0). Quyidagi ko'paytmani hisoblovchi programma tuzilsin. S=1.1*1.2* 1.3*... *n
+// let n = 20;
+// let result = 1;
+// for (let i = 11; i <= n; i++) {
+//   result = result * (i / 10);
+// }
+// console.log(result);
+
+// For10.
+// n butun soni berilgan (n > 0). Shu sonning kvadratini quyidagi formula asosida hisoblovchi programma tuzilsin.
+// let n = 9;
+// for (let i = 1; i < n; i++) {
+//   result = (i ** 2 == i + 2 + (2 * n - 1));
+// }
+
+// console.log(result)
+
+// For11.
+// n butun soni va a haqiqiy soni berilgan (n > 0). a ning n - darajasini aniqlovchi programma tuzilsin.
+// a^n=a*a*a...a;
+
+// let a = prompt(`Birinchi sonni kiriting`);
+// let n = prompt(`Ikkinchi sonni kiriting`);
+// for (let i = 1; i <= n; i++) {
+//   result = a ** n;
+// }
+// console.log(`${result} = ${a * i}`);
+
+// For12.
+// n butun soni va a haqiqiy soni berilgan (n > 0). Bir sikldan foydalanib a ning 1 dan n gacha bo'lgan barcha darajalarini chiqaruvchi programma tuzilsin.
+// let a = 4;
+// let n = 4;
+// for (let i = 0; i <= n; i++) {
+//   console.log(a ** i);
+// }
+
+// For13. n butun soni va a haqiqiy soni berilgan (n > 0). Bir sikldan foydalanib quyidagi a ning 1 dan n gacha bo'lgan barcha darajalarini chiqaruvchi va yig'indini hisoblovchi programma tuzilsin.
+// S = 1+a^1+a^2 + a^3 + ... a^n
+// let a = 3;
 // let n = 5;
 // let result = 0;
 // for (let i = 0; i <= n; i++) {
-//   result += (n + i) ** 2;
+//   console.log(a ** i);
+//   result = result += a ** i;
 // }
-// console.log(result);
+// console.log(`Umimiy yig'indi: ${result}`);
 
-// For4.
-// N butun soni berilgan. Quyidagi yig'indini chiqaruvchi programma tuzilsin.
-// 1^N+2^(N-1) + ...+ N^1
-// Input: N = 5;
-// 1 ^ 5 + 2 ^ 4 + 3 ^ 3 + 4 ^ 2 + 5 ^ 1
-// Output: 65
-// let n = 5;
-// let k = n;
+// For14.
+// n butun soni berilgan (n > 0). Bir sikldan foydalangan holda quyidagi yig'indini hisoblovchi programma tuzilsin.
+// S = 1! + 2! + 3! + ... + n!
+// let sum = 1;
+// let n = 7;
 // let result = 0;
-// for (let i = 1; i <= 5; i++) {
-//   result += i ** k;
-//   k--;
+// for (let i = 1; i <= n; i++) {
+//   sum *= i;
+// }
+// console.log(sum);
+
+// For15. N va K butun sonlari berilgan. Quyidagi yig'indini chiqaruvchi programma tuzilsin.
+// S = 1^K + 2^K + ... + N^K
+// let n = 4;
+// let k = 5;
+// let result = 0;
+// for (let i = 1; i <= n; i++) {
+//   result = result += i ** k;
 // }
 // console.log(result);
 
-// For5. A va B butun soni berilgan (A < B). A va B sonlari orasidagi barcha butun sonlarni chiqaruvchi programma tuzilsin. Bunda har bir son o'zining qiymaticha chiqarilsin. Ya'ni 3 soni 3 marta chiqariladi.
-
-// let a = 2;
-// let b = 7;
-// for (let i = a; i < b; i++) {
-//   for (let k = 0; k < i; k++) {
-//     console.log(i);
-//   }
+// For16. N butun soni berilgan. Quyidagi yig'indini chiqaruvchi programma tuzilsin.
+// S = 1^1 + 2^2 + … + N^N
+// let n = 4;
+// let m = n;
+// let sum = 0;
+// for (let i = 1; i <= n; i++) {
+//   sum += i ** m;
 // }
+// console.log(sum);
 
-// For6. Sonning bo’luvchilarini topish;
-// let son = 12;
-// for (let i = 1; i <= son; i++) {
-//   if (son % i == 0) {
-//     console.log(i);
-//   }
-// }
-
-// While1. N va K butun musbat sonlari berilgan. Faqat ayirish va qo'shish amallarini ishlatib N sonini K soniga bo'lgandagi qoldiq va butun qismini aniqlovchi programma tuzilsin.
-// let k = 3;
-// let n = 50;
+// For18.
+// Sonning barcha bo’luvchilarini, ularning sonini va yig’indisini chiqaruvchi dastur tuzing.
+// let a = 12;
 // let counter = 0;
-// while (k < n) {
-//   n = n - k;
-//   counter++;
+// let result = 0;
+// for (let i = 1; i <= a; i++) {
+//   if (a % i == 0) {
+//     result += i;
+//     counter++;
+//   }
 // }
-// console.log(`Butun son ${counter} va qoldiq ${n}`);
-// For bilan ishlangan varianti
-// for (let i = k; i <= n; i += 3) {
-//  counter++
-// }
+// console.log(result);
 // console.log(counter);
 
-// While2. 2 sonining qandaydir darajasini bildiruvchi n butun soni berilgan (n > 0). n = 2^k ni aniqlovchi programma tuzilsin.
+// For19.
+// n butun soni berilgan (n > 1). N sonini tub yoki tub emasligini aniqlovchi programma tuzilsin.
+// let n = 5;
+// let counter = 0;
+// for (let i = 1; i <= n; i++) {
+//   if (i % 2 == 0) {
+//     counter++;
+//   }
+// }
+// if (counter == 2) {
+//   console.log("Tub son");
+// } else {
+//   console.log("Tub son emas");
+// }
 
-// let n = +prompt(`2 ning darajasi bo'lgan sonlarni kiriting`);
-// let k = 0;
-// for (let i = k; i <= n; i++) {
-//   if (n == 2 ** i) {
+// For20. Sonlarni quyidagi tartibda chiqaruvchi dastur tuzing. N = 5 bo’lganda,
+// let n = 5;
+// for (let i = 1; i <= 5; i++) {
+//   for (let k = 1; k <= i; k++) {
 //     console.log(i);
 //   }
 // }
 
-// For1. a va b butun sonlari berilgan (a < b). a va b sonlari orasidagi barcha butun sonlarni (a va b ni ham) chiqaruvchi va chiqarilgan sonlar sonini chiqaruvchi programma tuzilsin. (a va b xam chiqarilsin).
-// let counter = 0;
-// let a = +prompt("Birinchi sonni kiriting");
-// let b = +prompt("Ikkinchi sonni kiriting");
-// for (let i = a; i <= b; i++) {
-//   counter++;
-//   console.log(i);
+// While1. A va B butun musbat sonlari berilgan (A> B). A usunlikdagi kesmada maksimal darajada B kesma joylashtirilgan. A kesmaning bo'sh qismini aniqlovchi programma tuzilsin. Ko'paytirish va bo'lish amallarini ishlatmang.
+// let a = 25;
+// let b = 3;
+// for (let i = a; i >= b; i--) {
+ 
 // }
-// console.log(`a va b orasidagi sonlar soni ${counter}`);
-
-// For2. a va b butun sonlari berilgan (a < b). a va b sonlari orasidagi barcha butun sonlarni (a va b dan tashqari) kamayish tartibida chiqaruvchi va chiqarilgan sonlar sonini chiqaruvchi progma tuzilsin.
-// let counter = 0;
-// let a = 3;
-// let b = 7;
-// for (let i = b; i >= a; i--) {
-//   counter++;
-//   console.log(i);
-// }
-// console.log(`a va b sonlar orasidagi sonlar soni ${counter}`)
-
-// For3. Bir kg konfetning narxi berilgan (haqiqiy son). 1, 2, 10 kg konfetni narxini chiqaruvchi programma tuzilsin.
-// let narx = +prompt(`Konfet narxini kiriting`);
-// for (let i = 1; i <= 10; i++) {
-//   console.log(`${i} kg konfet ${narx * i} so'm`);
-// }
+// console.log(a);
