@@ -1,169 +1,144 @@
-// For4.
-// Bir kg konfetning narxi berilgan (haqiqiy son). 1.2, 1.4, ..., 2 kg konfetni narxini chiqaruvchi programma tuzilsin.
-// let narx = +prompt(`Konfet narxini kiriting`);
-// for (let i = 12; i <= 20; i++) {
-//   console.log(`${i / 10} kg konfet narxi ${(i / 10) * narx}`);
+// Array1.
+// n natural soni berilgan. 3 sonining dastlabki n ta darajasidan tashkil topgan massivni qaytaruvchi getLevel3(n) nomli funksiya tuzing.
+// let newNumbers = [];
+// function getLevel3(n) {
+//   for (let i = 1; i <= n; i++) {
+//     newNumbers.push(i ** 3);
+//   }
+//   return newNumbers;
 // }
-
-// For5.
-// a va b butun sonlari berilgan (a < b). a dan b gacha bo'lgan barcha butun sonlar yig'indisini chiqaruvchi programma tuzilsin.
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt(`Ikkinchi sonni kiriting`);
-// let result = 0;
-// for (let i = a; i < b; i++) {
-//   result = result + i;
-// }
+// const result = getLevel3(5);
 // console.log(result);
 
-// For6.
-// a va b butun sonlari berilgan (a < b). a dan b gacha bo'lgan barcha butun sonlar ko'paytmasini chiqaruvchi programma tuzilsin.
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt(`Ikkinchi sonni kiriting`);
-// let result = 1;
-// for (let i = a; i < b; i++) {
-//   result = result * i;
-// }
-// console.log(result);
-
-// For7.
-// a va b butun sonlari berilgan (a < b). a dan b gacha bo'lgan barcha butun sonlar kvadratlarining yig'indisini chiqaruvchi programma tuzilsin.
-// let a = +prompt(`Birinchi sonni kiriting`);
-// let b = +prompt("Ikkinchi sonni kiriting");
-// let result = 0;
-// for (let i = a; i < b; i++) {
-//   result = i ** 2 + result;
-// }
-// console.log(result);
-
-// For8.
-// n butun soni berilgan (n > 0). Quyidagi yig'indini hisoblovchi programma tuzilsin. S=1+1/2+1/3+...+1/n
-// let n = 11;
-// let result = 0;
-// for (let i = 1; i <= n; i++) {
-//   result = result += 1 / i;
-// }
-// console.log(result);
-
-// For9.
-// n butun soni berilgan (n > 0). Quyidagi ko'paytmani hisoblovchi programma tuzilsin. S=1.1*1.2* 1.3*... *n
-// let n = 20;
-// let result = 1;
-// for (let i = 11; i <= n; i++) {
-//   result = result * (i / 10);
-// }
-// console.log(result);
-
-// For10.
-// n butun soni berilgan (n > 0). Shu sonning kvadratini quyidagi formula asosida hisoblovchi programma tuzilsin.
-// let n = 9;
+// Array2
+// n natural soni va X, Y butun sonlari berilgan (n > 2).
+// let n = 6;
+// let x = 1;
+// let y = 2;
+// let arr = [x, y];
+// let sum = arr[0] + arr[1];
 // for (let i = 1; i < n; i++) {
-//   result = (i ** 2 == i + 2 + (2 * n - 1));
+//   arr.push(sum);
+//   sum = sum += arr[i - 0];
+// }
+// console.log(arr);
+
+// Array3
+// n ta elementdan tashkil topgan massiv berilgan.
+// Massivning faqat toq indeksdagi elementlari teskari tartibda chiqarilsin.
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let newArr = [];
+// for (let i = arr.length; i >= 1; i--) {
+//   if (i % 2 != 0) {
+//     newArr.push(i);
+//   }
 // }
 
-// console.log(result)
+// console.log(newArr);
 
-// For11.
-// n butun soni va a haqiqiy soni berilgan (n > 0). a ning n - darajasini aniqlovchi programma tuzilsin.
-// a^n=a*a*a...a;
-
-// let a = prompt(`Birinchi sonni kiriting`);
-// let n = prompt(`Ikkinchi sonni kiriting`);
-// for (let i = 1; i <= n; i++) {
-//   result = a ** n;
-// }
-// console.log(`${result} = ${a * i}`);
-
-// For12.
-// n butun soni va a haqiqiy soni berilgan (n > 0). Bir sikldan foydalanib a ning 1 dan n gacha bo'lgan barcha darajalarini chiqaruvchi programma tuzilsin.
-// let a = 4;
-// let n = 4;
-// for (let i = 0; i <= n; i++) {
-//   console.log(a ** i);
-// }
-
-// For13. n butun soni va a haqiqiy soni berilgan (n > 0). Bir sikldan foydalanib quyidagi a ning 1 dan n gacha bo'lgan barcha darajalarini chiqaruvchi va yig'indini hisoblovchi programma tuzilsin.
-// S = 1+a^1+a^2 + a^3 + ... a^n
-// let a = 3;
-// let n = 5;
-// let result = 0;
-// for (let i = 0; i <= n; i++) {
-//   console.log(a ** i);
-//   result = result += a ** i;
-// }
-// console.log(`Umimiy yig'indi: ${result}`);
-
-// For14.
-// n butun soni berilgan (n > 0). Bir sikldan foydalangan holda quyidagi yig'indini hisoblovchi programma tuzilsin.
-// S = 1! + 2! + 3! + ... + n!
-// let sum = 1;
-// let n = 7;
-// let result = 0;
-// for (let i = 1; i <= n; i++) {
-//   sum *= i;
-// }
-// console.log(sum);
-
-// For15. N va K butun sonlari berilgan. Quyidagi yig'indini chiqaruvchi programma tuzilsin.
-// S = 1^K + 2^K + ... + N^K
-// let n = 4;
-// let k = 5;
-// let result = 0;
-// for (let i = 1; i <= n; i++) {
-//   result = result += i ** k;
-// }
-// console.log(result);
-
-// For16. N butun soni berilgan. Quyidagi yig'indini chiqaruvchi programma tuzilsin.
-// S = 1^1 + 2^2 + … + N^N
-// let n = 4;
-// let m = n;
+// Array4.
+// n ta elementdan tashkil topgan massiv berilgan.
+// Massivda eng kichik va eng katta elementlar joylashgan indekslar yig‘indisi aniqlansin.
+// const arr = [1, 15, 3, 8, 11, 6, 9];
+// let minArr = Math.min(...arr);
+// let maxArr = Math.max(...arr);
 // let sum = 0;
-// for (let i = 1; i <= n; i++) {
-//   sum += i ** m;
-// }
+// arr.map((x, index) => {
+//   if (x == minArr) {
+//     sum = sum += index;
+//   }
+//   if (x == maxArr) {
+//     sum = sum += index;
+//   }
+// });
 // console.log(sum);
 
-// For18.
-// Sonning barcha bo’luvchilarini, ularning sonini va yig’indisini chiqaruvchi dastur tuzing.
-// let a = 12;
+// Array5
+// n ta elementdan tashkil topgan massiv berilgan.
+// Massivning juft indeksdagi elementlari va toq indeksdagi elementlarini alohida massiv qilib chiqaring.
+// const arr = [4, 5, 7, 8, 6, 9];
+// let juftSonlar = [];
+// let toqSonlar = [];
+// arr.forEach((x) => {
+//   if (x % 2 == 0) {
+//     juftSonlar.push(x);
+//     return juftSonlar;
+//   } else {
+//     toqSonlar.push(x);
+//     return toqSonlar;
+//   }
+// });
+// console.log(`Juft sonlar:`, juftSonlar);
+// console.log(`Toq sonlar:`, toqSonlar);
+
+// Array6
+// n ta elementdan tashkil topgan massiv berilgan. Massivda eng ko‘p uchragan element va uning soni topilsin.
+// const arr = [2, 3, 2, 5, 3, 3, 7, 2, 3];
 // let counter = 0;
-// let result = 0;
-// for (let i = 1; i <= a; i++) {
-//   if (a % i == 0) {
-//     result += i;
+// let element;
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[0] == arr[i]) {
 //     counter++;
 //   }
 // }
-// console.log(result);
+
 // console.log(counter);
+// console.log(element);
 
-// For19.
-// n butun soni berilgan (n > 1). N sonini tub yoki tub emasligini aniqlovchi programma tuzilsin.
-// let n = 5;
-// let counter = 0;
-// for (let i = 1; i <= n; i++) {
-//   if (i % 2 == 0) {
-//     counter++;
+// Array7.
+// n ta elementdan tashkil topgan massiv va R butun soni berilgan.
+// Massiv elementlari orasidan R soniga eng uzoq son topilsin.
+
+// const arr = [10, 15, 2, 30, 18];
+// let r = 12;
+// let maxElement;
+// arr.forEach((x) => {
+//   arr.push(r);
+//   maxElement = Math.max(...arr);
+//   return maxElement;
+// });
+// console.log(maxElement);
+
+// Array8
+// n ta elementdan tashkil topgan massiv berilgan. Massivni ikkiga ajrating:
+// Birinchi yarmi o‘zidan katta bo‘lgan elementlarni
+// Ikkinchi yarmi o‘zidan kichik bo‘lgan elementlarni chiqarib bering.
+// const arr = [7, 3, 9, 1, 8, 2, 4];
+// let kattaSonlar = [];
+// let kichikSonlar = [];
+// arr.forEach((i) => {
+//   if (i >= arr.length) {
+//     kattaSonlar.push(i);
+//     return kattaSonlar;
+//   } else {
+//     kichikSonlar.push(i);
+//     return kichikSonlar;
+//   }
+// });
+// console.log(kattaSonlar);
+// console.log(kichikSonlar);
+
+// Array9.
+// n ta elementdan tashkil topgan massiv berilgan.
+// Massivning barcha elementlarini ikkita nusxada chiqaruvchi programma tuzing.
+// let arr = [1, 2, 3, 4];
+// let newArr = [];
+// arr.map((x) => {
+//   if (arr.includes(x)) {
+//     arr.push(x);
+//   }
+// });
+// console.log(arr);
+
+// Array10
+// n ta elementdan tashkil topgan massiv berilgan.
+// Massivning oxiridan boshlab har bir ikkinchi elementni chiqaruvchi programma tuzing.
+// const arr = [4, 5, 7, 8, 6, 9, 10, 15];
+// let newArr = [];
+// for (let i = arr.length; i >= 1; i--) {
+//   if (i % 2 != 0) {
+//     newArr.push(arr[i]);
 //   }
 // }
-// if (counter == 2) {
-//   console.log("Tub son");
-// } else {
-//   console.log("Tub son emas");
-// }
 
-// For20. Sonlarni quyidagi tartibda chiqaruvchi dastur tuzing. N = 5 bo’lganda,
-// let n = 5;
-// for (let i = 1; i <= 5; i++) {
-//   for (let k = 1; k <= i; k++) {
-//     console.log(i);
-//   }
-// }
-
-// While1. A va B butun musbat sonlari berilgan (A> B). A usunlikdagi kesmada maksimal darajada B kesma joylashtirilgan. A kesmaning bo'sh qismini aniqlovchi programma tuzilsin. Ko'paytirish va bo'lish amallarini ishlatmang.
-// let a = 25;
-// let b = 3;
-// for (let i = a; i >= b; i--) {
- 
-// }
-// console.log(a);
+// console.log(newArr);
