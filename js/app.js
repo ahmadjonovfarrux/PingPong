@@ -98,17 +98,18 @@
 //   languages: ["js", "python", "c++", "nodejs"],
 //   friends: ["Kamron", "Ozod", "Jamiliddin", "Jamshid"],
 // };
-// for (let key in me) {
-//   console.log(key));
-// }
+// const result = Object.values(me).forEach((key) => {
+//   console.log(key.toString());
+// });
 
 //2.
 //  Kalitlari 1 dan n gacha bo’lganlar sonlarga, qiymatlari esa o’sha sonlarning kvatratiga teng object hosil qiling. (for)
-// let n = 5;
-// const getLeveledTwo = {};
-// for (let i = 1; i <= n; i++) {
+let n = 5;
+const getLeveledTwo = {};
+for (let i = 1; i <= n; i++) {
+  console.log((getLeveledTwo.number = i), (getLeveledTwo.Newnumber = i ** 2));
+}
 
-// }
 // console.log(getLeveledTwo);
 
 // 5.
