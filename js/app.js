@@ -1,144 +1,122 @@
-// Array1.
-// n natural soni berilgan. 3 sonining dastlabki n ta darajasidan tashkil topgan massivni qaytaruvchi getLevel3(n) nomli funksiya tuzing.
-// let newNumbers = [];
-// function getLevel3(n) {
-//   for (let i = 1; i <= n; i++) {
-//     newNumbers.push(i ** 3);
-//   }
-//   return newNumbers;
+// let myObject = {
+//   name: "Farrux",
+//   sureName: "Ahmadjonov",
+//   fatherName: "Farhodjon",
+//   age: 19,
+//   job: false,
+//   isMerried: false,
+// };
+// Object.keys(myObject).forEach((x) => {
+//   console.log(`${x}:`, myObject[x]);
+// });
+// for (let key in myObject) {
+//   console.log(myObject[key]);
 // }
-// const result = getLevel3(5);
+
+// 1.
+// Quyidagi massivdagi barcha odamlarni yoshlarining o’rtacha qiymatini chiqaruvchi getAverageAge(arr) nomli funksiya yozing.
+// const people = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+// ];
+// function getAverageAge(arr) {
+//   const allAges = arr.reduce((acc, curVal) => {
+//     acc += curVal.age;
+//     return acc;
+//   }, 0);
+
+//   return allAges / arr.length;
+// }
+// console.log(getAverageAge(people));
+
+// 2.
+// Massiv ichidagi har bir objectga isMarried nomli property qo’shilsin. Agar object yoshi 25 dan kichi bo’lsa isMarried ga false, aks holda true qiymat o’zlashtirilsin.
+// const people = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+// ];
+// let result = people.map((person) => {
+//   return { name: person.name, age: person.age, isMarried: person.age > 25 };
+// });
 // console.log(result);
 
-// Array2
-// n natural soni va X, Y butun sonlari berilgan (n > 2).
-// let n = 6;
-// let x = 1;
-// let y = 2;
-// let arr = [x, y];
-// let sum = arr[0] + arr[1];
-// for (let i = 1; i < n; i++) {
-//   arr.push(sum);
-//   sum = sum += arr[i - 0];
-// }
-// console.log(arr);
+// 3.
+// Quyidagi objectlardan tuzilgan massiv ichidagi yoshi eng katta va yoshi eng kichik bo’lgan insonning ismlarini qaytaruvchi getNameMaxMinAge(arr) nomli funksiya yozing. (for);
+// const people = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+// ];
+// let names = [];
+// function getNameMaxMinAge(arr) {
+//   let maxAge = arr[0];
+//   let minAge = arr[1];
 
-// Array3
-// n ta elementdan tashkil topgan massiv berilgan.
-// Massivning faqat toq indeksdagi elementlari teskari tartibda chiqarilsin.
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// let newArr = [];
-// for (let i = arr.length; i >= 1; i--) {
-//   if (i % 2 != 0) {
-//     newArr.push(i);
+//   for (let item of arr) {
+//     if (item.age > maxAge.age) {
+//       maxAge = item;
+//     }
+
+//     if (item.age < minAge.age) {
+//       minAge = item;
+//     }
+//   }
+//   names.push(maxAge.name);
+//   names.push(minAge.name);
+//   return names;
+// }
+// console.log(getNameMaxMinAge(people));
+//4.
+//  Objectda turli xil kalitlar bir xil qiymatlarga ega, kalitlari o'sha qiymatlardan iborat shunday object tuzingki, bu objectning qiymatlari massiv ko'rinishidagi eski objectning kalitlarlaridan iborat bo'lsin.
+// const numbers = { 1: 20, 2: 30, 3: 20, 4: 40, 5: 30, 6: 50, 7: 40, 8: 20 };
+// const newNumbers = { 20: [], 30: [], 40: [], 50: [] };
+// Object.keys(numbers);
+// for (let key in numbers) {
+//   if (numbers[key] == 20) {
+//     newNumbers[20].push(Number(key));
+//   } else if (numbers[key] == 30) {
+//     newNumbers[30].push(Number(key));
+//   } else if (numbers[key] == 40) {
+//     newNumbers[40].push(Number(key));
+//   } else if (numbers[key] == 50) {
+//     newNumbers[50].push(Number(key));
 //   }
 // }
+// console.log(newNumbers);
 
-// console.log(newArr);
+// 1.
+//  Quyidagi objectni outputdagi ko'rinishda chiqaring. (toString, join)
+// const me = {
+//   firstName: "Farrux",
+//   lastName: "Ahmadjonov",
+//   age: 19,
+//   languages: ["js", "python", "c++", "nodejs"],
+//   friends: ["Kamron", "Ozod", "Jamiliddin", "Jamshid"],
+// };
+// for (let key in me) {
+//   console.log(key));
+// }
 
-// Array4.
-// n ta elementdan tashkil topgan massiv berilgan.
-// Massivda eng kichik va eng katta elementlar joylashgan indekslar yig‘indisi aniqlansin.
-// const arr = [1, 15, 3, 8, 11, 6, 9];
-// let minArr = Math.min(...arr);
-// let maxArr = Math.max(...arr);
+//2.
+//  Kalitlari 1 dan n gacha bo’lganlar sonlarga, qiymatlari esa o’sha sonlarning kvatratiga teng object hosil qiling. (for)
+// let n = 5;
+// const getLeveledTwo = {};
+// for (let i = 1; i <= n; i++) {
+
+// }
+// console.log(getLeveledTwo);
+
+// 5.
+// Shunday object berilganki, uning kalitlari mahsulotlardan va qiymatlari esa ularning narxlaridan tuzilgan. Barcha mahsulot qancha turishini toping. (Object.values())
 // let sum = 0;
-// arr.map((x, index) => {
-//   if (x == minArr) {
-//     sum = sum += index;
-//   }
-//   if (x == maxArr) {
-//     sum = sum += index;
-//   }
+// const fruits = { Apelsin: 10000, Olma: 12000, Mandarin: 8000, Banan: 20000 };
+// Object.values(fruits).forEach((price) => {
+//   sum += price;
+//   return sum;
 // });
 // console.log(sum);
-
-// Array5
-// n ta elementdan tashkil topgan massiv berilgan.
-// Massivning juft indeksdagi elementlari va toq indeksdagi elementlarini alohida massiv qilib chiqaring.
-// const arr = [4, 5, 7, 8, 6, 9];
-// let juftSonlar = [];
-// let toqSonlar = [];
-// arr.forEach((x) => {
-//   if (x % 2 == 0) {
-//     juftSonlar.push(x);
-//     return juftSonlar;
-//   } else {
-//     toqSonlar.push(x);
-//     return toqSonlar;
-//   }
-// });
-// console.log(`Juft sonlar:`, juftSonlar);
-// console.log(`Toq sonlar:`, toqSonlar);
-
-// Array6
-// n ta elementdan tashkil topgan massiv berilgan. Massivda eng ko‘p uchragan element va uning soni topilsin.
-// const arr = [2, 3, 2, 5, 3, 3, 7, 2, 3];
-// let counter = 0;
-// let element;
-// for (let i = 0; i < arr.length; i++) {
-//   if (arr[0] == arr[i]) {
-//     counter++;
-//   }
-// }
-
-// console.log(counter);
-// console.log(element);
-
-// Array7.
-// n ta elementdan tashkil topgan massiv va R butun soni berilgan.
-// Massiv elementlari orasidan R soniga eng uzoq son topilsin.
-
-// const arr = [10, 15, 2, 30, 18];
-// let r = 12;
-// let maxElement;
-// arr.forEach((x) => {
-//   arr.push(r);
-//   maxElement = Math.max(...arr);
-//   return maxElement;
-// });
-// console.log(maxElement);
-
-// Array8
-// n ta elementdan tashkil topgan massiv berilgan. Massivni ikkiga ajrating:
-// Birinchi yarmi o‘zidan katta bo‘lgan elementlarni
-// Ikkinchi yarmi o‘zidan kichik bo‘lgan elementlarni chiqarib bering.
-// const arr = [7, 3, 9, 1, 8, 2, 4];
-// let kattaSonlar = [];
-// let kichikSonlar = [];
-// arr.forEach((i) => {
-//   if (i >= arr.length) {
-//     kattaSonlar.push(i);
-//     return kattaSonlar;
-//   } else {
-//     kichikSonlar.push(i);
-//     return kichikSonlar;
-//   }
-// });
-// console.log(kattaSonlar);
-// console.log(kichikSonlar);
-
-// Array9.
-// n ta elementdan tashkil topgan massiv berilgan.
-// Massivning barcha elementlarini ikkita nusxada chiqaruvchi programma tuzing.
-// let arr = [1, 2, 3, 4];
-// let newArr = [];
-// arr.map((x) => {
-//   if (arr.includes(x)) {
-//     arr.push(x);
-//   }
-// });
-// console.log(arr);
-
-// Array10
-// n ta elementdan tashkil topgan massiv berilgan.
-// Massivning oxiridan boshlab har bir ikkinchi elementni chiqaruvchi programma tuzing.
-// const arr = [4, 5, 7, 8, 6, 9, 10, 15];
-// let newArr = [];
-// for (let i = arr.length; i >= 1; i--) {
-//   if (i % 2 != 0) {
-//     newArr.push(arr[i]);
-//   }
-// }
-
-// console.log(newArr);
