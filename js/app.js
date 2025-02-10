@@ -89,6 +89,12 @@
 // }
 // console.log(newNumbers);
 
+// const obj1 = { a: 3, b: 10, c: 5, d: 7 };
+// const obj2 = { a: 10, d: 4, e: 6, f: 15 };
+// const keys1 = Object.keys(obj1);
+// const keys2 = Object.keys(obj2);
+
+
 // 1.
 //  Quyidagi objectni outputdagi ko'rinishda chiqaring. (toString, join)
 // const me = {
@@ -125,12 +131,10 @@
 
 // 4.
 // Stringlar massivi berilgan. Shunday object hosil qilingki, o’sha objectning kalitlari massiv elementlaridan va qiymatlari esa ularning uzunligidan iborat bo’lsin. (for)
-// const names = ["Abdulaziz", "Safarmurod", "O’rol", "Jahongir"];
+//  const names = ["Abdulaziz", "Safarmurod", "O’rol", "Jahongir"];
 // let namesLength = {};
 // for (let key of names) {
-//   for (let i = 0; i <= key.length; i++) {
-//     namesLength[key] = i;
-//   }
+//     namesLength[key] = key.length;
 // }
 // console.log(namesLength);
 
