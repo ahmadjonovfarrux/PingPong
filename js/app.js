@@ -89,6 +89,12 @@
 // }
 // console.log(newNumbers);
 
+// const obj1 = { a: 3, b: 10, c: 5, d: 7 };
+// const obj2 = { a: 10, d: 4, e: 6, f: 15 };
+// const keys1 = Object.keys(obj1);
+// const keys2 = Object.keys(obj2);
+
+
 // 1.
 //  Quyidagi objectni outputdagi ko'rinishda chiqaring. (toString, join)
 // const me = {
@@ -104,13 +110,33 @@
 
 //2.
 //  Kalitlari 1 dan n gacha bo’lganlar sonlarga, qiymatlari esa o’sha sonlarning kvatratiga teng object hosil qiling. (for)
-let n = 5;
-const getLeveledTwo = {};
-for (let i = 1; i <= n; i++) {
-  console.log((getLeveledTwo.number = i), (getLeveledTwo.Newnumber = i ** 2));
-}
-
+// let n = 5;
+// const getLeveledTwo = {};
+// for (let i = 1; i <= n; i++) {
+//   getLeveledTwo[i] = i ** 2;
+// }
 // console.log(getLeveledTwo);
+
+// 3. Kalitlari 1 dan n gacha bo’lganlar sonlarga, qiymatlari esa o’sha sonlarning kvatratiga teng object hosil qiling. (for)
+
+// let n = 5;
+// let iSum = 0;
+// let twoLeveledSum = 0;
+// const getLeveledTwo = {};
+// for (let i = 1; i <= n; i++) {
+//   (iSum += i), (twoLeveledSum += i ** 2);
+// }
+// console.log(iSum);
+// console.log(twoLeveledSum);
+
+// 4.
+// Stringlar massivi berilgan. Shunday object hosil qilingki, o’sha objectning kalitlari massiv elementlaridan va qiymatlari esa ularning uzunligidan iborat bo’lsin. (for)
+//  const names = ["Abdulaziz", "Safarmurod", "O’rol", "Jahongir"];
+// let namesLength = {};
+// for (let key of names) {
+//     namesLength[key] = key.length;
+// }
+// console.log(namesLength);
 
 // 5.
 // Shunday object berilganki, uning kalitlari mahsulotlardan va qiymatlari esa ularning narxlaridan tuzilgan. Barcha mahsulot qancha turishini toping. (Object.values())
