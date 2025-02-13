@@ -77,3 +77,14 @@
 //   ul.appendChild(div);
 // });
 
+// Tonsky.me
+const container = document.querySelector("#homeContainer");
+const button = document.querySelector("#changerBtn");
+button.addEventListener("click", () => {
+  container.style.backgroundColor = "black";
+  container.style.color = "white";
+});
+button.addEventListener("dblclick", () => {
+  container.style.backgroundColor = "white";
+  container.style.color = "black";
+});
