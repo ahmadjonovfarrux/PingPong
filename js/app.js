@@ -67,4 +67,24 @@
 //   );
 // });
 
-// 3-mashq
+// // 3-mashq
+// const button = document.querySelector("#addElementBtn");
+// const ul = document.querySelector("ul");
+// button.addEventListener("click", () => {
+//   const div = document.createElement("div");
+//   div.textContent =
+//     "Our group is trying to be one of the most successesfull group in this academy";
+//   ul.appendChild(div);
+// });
+
+// Tonsky.me
+const container = document.querySelector("#homeContainer");
+const button = document.querySelector("#changerBtn");
+button.addEventListener("click", () => {
+  container.style.backgroundColor = "black";
+  container.style.color = "white";
+});
+button.addEventListener("dblclick", () => {
+  container.style.backgroundColor = "white";
+  container.style.color = "black";
+});
